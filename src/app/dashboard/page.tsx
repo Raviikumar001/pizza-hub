@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Dashboard = () => {
   const { user } = useUser();
@@ -98,13 +99,13 @@ const Dashboard = () => {
       title: "Analytics",
       description: "View performance metrics",
       icon: TrendingUp,
-      href: "#",
+      href: "/pizza-orders",
     },
     {
       title: "Active Orders",
       description: "Track current deliveries",
       icon: Clock,
-      href: "#",
+      href: "/pizza-orders",
     },
   ];
 
@@ -230,6 +231,7 @@ const Dashboard = () => {
                         whileTap={{ scale: 0.98 }}
                         className="p-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200 text-left group"
                       >
+                        <Link  href={action.href}>
                         <div className="flex items-start space-x-3">
                           <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-colors">
                             <Icon className="h-4 w-4 text-gray-600" />
@@ -246,6 +248,7 @@ const Dashboard = () => {
                             </p>
                           </div>
                         </div>
+                        </Link>
                       </motion.button>
                     );
                   })}

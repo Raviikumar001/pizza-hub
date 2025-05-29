@@ -39,12 +39,13 @@ const Navigation = () => {
               >
                 <Pizza className="h-8 w-8 text-white" />
               </motion.div>
+              <Link href="/dashboard" className="ml-3">
               <span className="ml-3 text-2xl font-black text-gray-900">
                 Pizza
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
-                  Dash
+                  Hub
                 </span>
-              </span>
+              </span></Link>
             </motion.div>
 
             {/* Desktop Navigation */}
