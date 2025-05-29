@@ -165,7 +165,7 @@ const LandingPage = () => {
           </motion.p>
 
           <motion.div variants={fadeInUp}>
-            <Link href="/sign-up">
+          <SignInButton mode="modal">
               <motion.button
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
@@ -174,7 +174,7 @@ const LandingPage = () => {
                 Get Started Free
                 <ArrowRight className="h-5 w-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
               </motion.button>
-            </Link>
+            </SignInButton>
           </motion.div>
         </motion.div>
 

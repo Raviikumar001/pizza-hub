@@ -294,9 +294,11 @@ const Dashboard = () => {
                     </motion.div>
                   ))}
                 </div>
+                <Link  href="/pizza-orders">
                 <button className="w-full mt-4 text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   View all activities
                 </button>
+                </Link>
               </div>
             </motion.div>
           </div>
