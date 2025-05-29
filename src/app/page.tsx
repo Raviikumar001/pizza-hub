@@ -107,7 +107,7 @@ const LandingPage = () => {
                 <Pizza className="h-7 w-7 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-                PizzaDash
+                PizzaHub
               </span>
             </motion.div>
 
@@ -237,7 +237,7 @@ const LandingPage = () => {
                 Ready to transform your pizza business?
               </h2>
               <p className="text-blue-100 text-lg mb-8">
-                Join thousands of pizza shop owners who trust PizzaDash for
+                Join thousands of pizza shop owners who trust PizzaHub for
                 their daily operations.
               </p>
               <Link href="/sign-up">

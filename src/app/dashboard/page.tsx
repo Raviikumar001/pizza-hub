@@ -16,6 +16,15 @@ import Image from "next/image";
 const Dashboard = () => {
   const { user } = useUser();
 
+  // Add this function to get time-based greeting
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 12) return "Good morning";
+    if (hour >= 12 && hour < 17) return "Good afternoon";
+    if (hour >= 17 && hour < 21) return "Good evening";
+    return "Good night";
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -133,7 +142,12 @@ const Dashboard = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-3xl font-semibold text-gray-900 mb-2">
-                  Good morning, {user?.firstName || "there"}! ☀️
+                  {getGreeting()}, {user?.firstName || "there"}!{" "}
+                  {/* Add emoji based on time */}
+                  {getGreeting() === "Good morning" && " ☀️"}
+                  {getGreeting() === "Good afternoon" && " 🌤️"}
+                  {getGreeting() === "Good evening" && " 🌅"}
+                  {getGreeting() === "Good night" && " 🌙"}
                 </h1>
                 <p className="text-gray-600">
                   Here&apos;s what&apos;s happening with your pizza business
