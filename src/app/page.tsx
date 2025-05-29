@@ -26,14 +26,14 @@ const Index = () => {
     }
   }, [isSignedIn, isLoaded, router]);
 
-  // Show loading state while clerk is initializing
+
   if (!isLoaded) {
     return <div></div>;
   }
   return (
     <>
       <SignedIn>
-        {/* This will only render while redirecting */}
+   
         <div className="min-h-screen flex items-center justify-center">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-500"></div>
         </div>
@@ -127,7 +127,7 @@ const LandingPage = () => {
 
       {/* Main Content */}
       <main className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Hero Section */}
+     
         <motion.div
           className="text-center py-20 lg:py-32"
           variants={staggerContainer}

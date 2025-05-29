@@ -16,7 +16,7 @@ import Image from "next/image";
 const Dashboard = () => {
   const { user } = useUser();
 
-  // Add this function to get time-based greeting
+
   const getGreeting = () => {
     const hour = new Date().getHours();
     if (hour >= 5 && hour < 12) return "Good morning";
