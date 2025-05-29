@@ -2,7 +2,6 @@
 
 import { SignedIn, SignedOut, SignInButton, useAuth } from "@clerk/clerk-react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { useEffect } from "react";
 import {
   Pizza,
