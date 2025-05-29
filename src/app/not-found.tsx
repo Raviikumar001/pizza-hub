@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { Metadata } from "next";
+import Link from 'next/link'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Not Found",
-};
+  title: 'Not Found',
+}
 
 export default function NotFound() {
   return (
@@ -17,5 +17,5 @@ export default function NotFound() {
         Return Home
       </Link>
     </div>
-  );
+  )
 }

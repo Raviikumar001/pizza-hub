@@ -1,3 +1,4 @@
+"use client";
 import { useAuth } from "@clerk/clerk-react";
 import { useRouter } from "next/navigation";
 

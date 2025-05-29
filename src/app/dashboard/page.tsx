@@ -1,3 +1,4 @@
+"use client";
 import { useUser } from "@clerk/clerk-react";
 import Navigation from "@/components/Navigation";
 import ProtectedRoute from "@/components/ProtectedRoute";
@@ -10,6 +11,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Dashboard = () => {
   const { user } = useUser();
@@ -134,17 +136,20 @@ const Dashboard = () => {
                   Good morning, {user?.firstName || "there"}! ☀️
                 </h1>
                 <p className="text-gray-600">
-                  Here's what's happening with your pizza business today.
+                  Here&apos;s what&apos;s happening with your pizza business
+                  today.
                 </p>
               </div>
               <div className="hidden sm:flex items-center space-x-3">
-                <img
+                <Image
                   className="h-12 w-12 rounded-full ring-2 ring-white shadow-sm"
                   src={
                     user?.imageUrl ||
                     `https://ui-avatars.com/api/?name=${user?.firstName || "User"}&background=f97316&color=ffffff`
                   }
                   alt="Profile"
+                  height={23}
+                  width={23}
                 />
               </div>
             </div>
@@ -155,7 +160,7 @@ const Dashboard = () => {
             variants={itemVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
           >
-            {stats.map((stat, index) => {
+            {stats.map((stat) => {
               const Icon = stat.icon;
               return (
                 <motion.div
@@ -202,7 +207,7 @@ const Dashboard = () => {
                   <Eye className="h-5 w-5 text-gray-400" />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {quickActions.map((action, index) => {
+                  {quickActions.map((action) => {
                     const Icon = action.icon;
                     return (
                       <motion.button
